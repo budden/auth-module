@@ -10,13 +10,13 @@ module.exports = {
   build: {
     extractCSS: true
   },
-  serverMiddleware: ['../api/auth'],
+  //serverMiddleware: ['../api/auth'],
   modules: ['bootstrap-vue/nuxt', '@nuxtjs/axios', '@@'],
   axios: {
     proxy: true
   },
   proxy: {
-    '/api': 'http://localhost:3000'
+    '/api': 'http://localhost:8082'
   },
   auth: {
     redirect: {

@@ -1,8 +1,5 @@
 const { resolve } = require('path')
 
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-console.log("werwerewrwerewrwewererwr")
-
 module.exports = {
   rootDir: resolve(__dirname, '../..'),
   srcDir: __dirname,

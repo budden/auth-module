@@ -1,5 +1,8 @@
 const { resolve } = require('path')
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+console.log("werwerewrwerewrwewererwr")
+
 module.exports = {
   rootDir: resolve(__dirname, '../..'),
   srcDir: __dirname,
@@ -16,7 +19,8 @@ module.exports = {
     proxy: true
   },
   proxy: {
-    '/api': 'http://localhost:8082'
+    // secure: false - нужно только для development!
+    '/api': { target: 'https://localhost:8445', secure: false }
   },
   auth: {
     redirect: {

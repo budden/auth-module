@@ -23,8 +23,8 @@
   },
   "scripts": {
     "heroku-postbuild": "nuxt build examples/demo",
-    "start": "nuxt start examples/demo",
-    "dev": "nuxt examples/demo",
+    "start": "NODE_ENV=production node examples/demo/run-nuxt-with-https.js",
+    "dev": "node examples/demo/run-nuxt-with-https.js",
     "lint": "eslint lib src test",
     "lint-fix": "eslint --fix lib src test",
     "test": "npm run lint && jest",

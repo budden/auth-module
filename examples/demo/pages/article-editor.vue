@@ -19,7 +19,7 @@ export default {
                 { код: 'код не загружен', слово: 'слово не загружено', перевод: 'перевод не загружен'}, 
                   Сохранено: true} },
   async asyncData () {
-    const { data : запись_из_базы} = await axios.get(encodeURI('http://127.0.0.1:8082/дай-статью'));
+    const { data : запись_из_базы} = await axios.get(encodeURI('https://127.0.0.1:8445/дай-статью'));
     console.log("Получили статью: ",запись_из_базы)
     return { английское_слово : запись_из_базы };
   },
@@ -37,7 +37,7 @@ export default {
             // alert(утил.format('вызвано "Записать" для данных: %s', this.английское_слово.перевод));
             console.log(this.$auth.getToken("local"));
             const Успех = await axios.put(encodeURI('/api/auth/savearticle'
-            //'http://127.0.0.1:8082/api/auth/запиши-одно-слово'
+            //'https://127.0.0.1:8445/api/auth/запиши-одно-слово'
             ),this.английское_слово, { headers: { Authorization: this.$auth.getToken("local")}});
             this.Сохранено = true;
           } catch (и) {

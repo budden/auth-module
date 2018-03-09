@@ -22,9 +22,9 @@
     "access": "public"
   },
   "scripts": {
-    "heroku-postbuild": "nuxt build examples/demo",
-    "start": "NODE_ENV=production node examples/demo/run-nuxt-with-https.js",
-    "dev": "node examples/demo/run-nuxt-with-https.js",
+    "heroku-postbuild": "nuxt build",
+    "start": "NODE_ENV=production node run-nuxt-with-https.js",
+    "dev": "node run-nuxt-with-https.js",
     "lint": "eslint lib src test",
     "lint-fix": "eslint --fix lib src test",
     "test": "npm run lint && jest",
@@ -46,7 +46,8 @@
     "cookie": "^0.3.1",
     "dotprop": "^1.0.2",
     "js-cookie": "^2.2.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "vue-blockui": "^1.1.6"
   },
   "devDependencies": {
     "@nuxtjs/toast": "^2.3.3",
